@@ -21,7 +21,7 @@
 #                 self.rchild.insertion(data)
 #             else:
 #                 self.rchild = BST(data)
-    
+
 #     def search(self,data):
 #         if self.key == data:
 #             print("Data is Found")
@@ -50,7 +50,7 @@
 #         print(self.key, end=" ")
 #         if self.rchild:
 #             self.rchild.inorder()
-    
+
 #     def postorder(self):
 #         if self.lchild:
 #             self.lchild.postorder()
@@ -87,7 +87,7 @@
 #             self.key = node.key
 #             self.rchild = self.rchild.delete(node.key)
 #         return self
-        
+
 #     def min_node(self):
 #         current = self
 #         while current.lchild:
@@ -100,19 +100,19 @@
 #             current = current.rchild
 #         print("Node with largest key is: ", current.key)
 
-    # def validation(self):
-    #     if self.key is None:
-    #         return True
-    #     if self.lchild and self.lchild.key > self.key:
-    #         return False
-    #     if self.rchild and self.rchild.key < self.key:
-    #         return False
-    #     if self.lchild is not None and not self.lchild.validation():
-    #         return False
-    #     if self.rchild is not None and not self.rchild.validation():
-    #         return False
-    #     return True
-    
+# def validation(self):
+#     if self.key is None:
+#         return True
+#     if self.lchild and self.lchild.key > self.key:
+#         return False
+#     if self.rchild and self.rchild.key < self.key:
+#         return False
+#     if self.lchild is not None and not self.lchild.validation():
+#         return False
+#     if self.rchild is not None and not self.rchild.validation():
+#         return False
+#     return True
+
 
 # root = BST(None)
 # list1 = [1,4,2,9,7]
@@ -140,13 +140,13 @@
 
 #     def parent(self,index):
 #         return (index-1)//2
-    
+
 #     def left(self,index):
 #         return (2*index)+1
-    
+
 #     def right(self,index):
 #         return (2*index)+2
-    
+
 #     def insert(self,val):
 #         self.heap.append(val)
 #         curr = len(self.heap)-1
@@ -177,13 +177,13 @@
 #             self.heap[0]=self.heap.pop()
 #             self.heapify(0)
 #             return val
-        
+
 #     def heap_sort(self):
 #         sort_array = []
 #         while self.heap:
 #             sort_array.append(self.extract_min())
 #         return sort_array
-    
+
 # h1 = MinHeap()
 # h1.insert(70)
 # h1.insert(20)
@@ -229,7 +229,7 @@
 #                 return False
 #             node = node.child[char]
 #         return node.end
-    
+
 # tr = Trie()
 # tr.insert("vishnu")
 # tr.insert("her")
@@ -273,19 +273,21 @@
 
 # ------------------------------------------------- #
 
+
 def rob(nums):
     prev1 = 0
     prev2 = 0
 
     for num in nums:
-    #   print(prev1,"prev1")
-    #   print(prev2,"prev2")
-      maxi = max(prev1, prev2 + num)
-      print(maxi,"maxi")
-      prev2 = prev1
-      prev1 = maxi
+        #   print(prev1,"prev1")
+        #   print(prev2,"prev2")
+        maxi = max(prev1, prev2 + num)
+        print(maxi, "maxi")
+        prev2 = prev1
+        prev1 = maxi
 
     return prev1
 
-nums = [1,2,10,11,7,3]
+
+nums = [1, 2, 10, 11, 7, 3]
 print(rob(nums))

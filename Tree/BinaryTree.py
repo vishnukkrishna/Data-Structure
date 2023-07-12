@@ -7,7 +7,7 @@ class BST:
         self.rchild = None
 
     # Insertion
-    def insert(self,data):
+    def insert(self, data):
         if self.key is None:
             self.key = data
             return
@@ -19,16 +19,16 @@ class BST:
             if self.lchild:
                 self.lchild.insert(data)
             else:
-                self.lchild = BST(data) # Create a new node means creating an object
+                self.lchild = BST(data)  # Create a new node means creating an object
         else:
             # Right side part
             if self.rchild:
                 self.rchild.insert(data)
             else:
-                self.rchild = BST(data) # Create a new node means creating an object
+                self.rchild = BST(data)  # Create a new node means creating an object
 
     # Searching
-    def search(self,data):
+    def search(self, data):
         if self.key == data:
             print("Node is found!")
             return
@@ -69,7 +69,7 @@ class BST:
         print(self.key, end=" ")
 
     # Deletion
-    def delete(self,data):
+    def delete(self, data):
         if self.key is None:
             print("Tree is empty")
             return
@@ -126,7 +126,7 @@ class BST:
 
 
 root = BST(None)
-list1 = [1,4,2,9,7]
+list1 = [1, 4, 2, 9, 7]
 for i in list1:
     root.insert(i)
 

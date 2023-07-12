@@ -3,7 +3,7 @@
 #         self.key = key
 #         self.lchild = None
 #         self.rchild = None
-    
+
 #     def insert(self, data):
 #         if self.key is None:
 #             self.key = data
@@ -20,14 +20,13 @@
 #                 self.rchild.insert(data)
 #             else:
 #                 self.rchild = BST(data)
-        
+
 #     def inorder(self):
 #         if self.lchild:
 #             self.lchild.inorder()
 #         print(self.key, end=" ")
 #         if self.rchild:
 #             self.rchild.inorder()
-
 
 
 # root = BST(None)
@@ -40,20 +39,19 @@
 # print()
 
 
-
 # class MinHeap:
 #     def __init__(self):
 #         self.heap=[]
 
 #     def parent(self,index):
 #         return (index-1)//2
-    
+
 #     def left(self,index):
 #         return (2*index)+1
-    
+
 #     def right(self,index):
 #         return (2*index)+2
-        
+
 #     def insert(self,val):
 #         self.heap.append(val)
 #         curr = len(self.heap)-1
@@ -65,13 +63,13 @@
 #         r = self.right(index)
 #         l = self.left(index)
 #         small = index
-        
+
 #         if l < len(self.heap) and self.heap[l] < self.heap[small]:
 #             small = l
-        
+
 #         if r < len(self.heap) and self.heap[r] < self.heap[small]:
 #             small = r
-        
+
 #         if small != index:
 #             self.heap[small] , self.heap[index] =  self.heap[index] , self.heap[small]
 #             self.heapify(small)
@@ -79,22 +77,22 @@
 #     def extract_min(self):
 #         if self.heap is None:
 #             return None
-#         # One value 
+#         # One value
 #         elif len(self.heap)==1:
 #             return self.heap.pop()
-        
+
 #         else:
 #             val = self.heap[0]
 #             self.heap[0]=self.heap.pop()
 #             self.heapify(0)
 #             return val
-        
+
 #     def heap_sort(self):
 #         sorted_array = []
 #         while self.heap:
 #             sorted_array.append(self.extract_min())
 #         return sorted_array
-        
+
 # h1 = MinHeap()
 # h1.insert(10)
 # h1.insert(20)
@@ -107,7 +105,7 @@
 # print("Min Heap")
 # print(h1.heap)
 # # print(h1.extract_min())
- 
+
 # sorted_array = h1.heap_sort()
 # print("Sorted array (Heap Sort):")
 # print(sorted_array)
@@ -133,7 +131,6 @@
 #         break
 # else:
 #     print("Prime number")
-
 
 
 # def decortor(func):

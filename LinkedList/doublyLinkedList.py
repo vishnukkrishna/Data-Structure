@@ -5,7 +5,7 @@
 #         self.nref = None
 #         self.pref = None
 
-    
+
 # class DoublyLL:
 #     def __init__(self):
 #         self.head = None
@@ -42,12 +42,14 @@
 
 #  Add/Insertion Operations
 
+
 # At the beginning and Add End
 class Node:
     def __init__(self, data):
         self.data = data
         self.nref = None
         self.pref = None
+
 
 class DoublyLL:
     def __init__(self):
@@ -60,7 +62,7 @@ class DoublyLL:
         else:
             n = self.head
             while n is not None:
-                print(n.data,"-->",end=" ")
+                print(n.data, "-->", end=" ")
                 n = n.nref
 
     def print_LL_reverse(self):
@@ -73,7 +75,7 @@ class DoublyLL:
             while n.nref is not None:
                 n = n.nref
             while n is not None:
-                print(n.data,"-->", end=" ")
+                print(n.data, "-->", end=" ")
                 n = n.pref
 
     def insert_empty(self, data):
@@ -82,7 +84,6 @@ class DoublyLL:
             self.head = new_node
         else:
             print("Linked List is Not Empty!")
-
 
     def add_begin(self, data):
         new_node = Node(data)
@@ -152,7 +153,7 @@ dl1.add_begin(10)
 # dl1.add_end(30)
 # dl1.add_after(20,10)
 # dl1.add_after(30,20)
-dl1.add_before(20,10)
+dl1.add_before(20, 10)
 
 dl1.print_LL()
 dl1.print_LL_reverse()

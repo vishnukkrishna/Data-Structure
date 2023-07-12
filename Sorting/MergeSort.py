@@ -37,38 +37,39 @@
 #             list1[k] = right[j]
 #             j = j+1
 #             k = k+1
-            
+
 # list1 = [20, 1, 50, 40, 2]
 # merge_sort(list1)
 # print("Sorted Array in Ascending Order:",list1)
 
 
 def mergesort(arr):
-    if len(arr)<=1:
+    if len(arr) <= 1:
         return arr
-    mid=len(arr)//2
-    left=arr[:mid]
-    right=arr[mid:]
-    left=mergesort(left)
-    right=mergesort(right)
-    return merge(left,right)
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+    left = mergesort(left)
+    right = mergesort(right)
+    return merge(left, right)
 
-def merge(left,right):
-    result=[]
-    i=j=0
-    while i<len(left) and j<len(right):
-        if left[i]<right[j]:
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
             result.append(left[i])
-            i=i+1
+            i = i + 1
         else:
             result.append(right[j])
-            j=j+1
+            j = j + 1
 
-    result=result+left[i:]
-    result=result+right[j:]
+    result = result + left[i:]
+    result = result + right[j:]
     return result
 
 
-arr=[5,2,8,0,1,6]
-sortedarr=mergesort(arr)
+arr = [5, 2, 8, 0, 1, 6]
+sortedarr = mergesort(arr)
 print(sortedarr)

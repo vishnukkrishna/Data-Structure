@@ -3,6 +3,7 @@ class SuffixTrieNode:
     def __init__(self):
         self.children = {}
 
+
 class SuffixTrie:
     def __init__(self):
         self.root = SuffixTrieNode()
@@ -25,7 +26,7 @@ class SuffixTrie:
             if char not in node.children:
                 return None
             node = node.children[char]
-        return node.index if hasattr(node, 'index') else None
+        return node.index if hasattr(node, "index") else None
 
 
 trie = SuffixTrie()

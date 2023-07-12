@@ -1,6 +1,6 @@
 # # Queue
 # queue = []
-# # Adding the element in queue 
+# # Adding the element in queue
 # queue.append(10)
 # queue.append(20)
 # queue.append(30)
@@ -73,6 +73,7 @@
 
 
 import queue
+
 q = queue.Queue()
 q.put(10)
 q.put(20)
@@ -82,4 +83,3 @@ print(q)
 print(q.get())
 print(q.get())
 print(q.get())
-

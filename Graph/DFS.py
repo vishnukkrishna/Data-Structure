@@ -2,26 +2,25 @@
 class Node:
     def __init__(self) -> None:
         self.graph = {}
-    
-    def insert(self,vertex):
+
+    def insert(self, vertex):
         self.graph[vertex] = []
 
-    def add_edge(self,v1,v2):
-        if v1 not in self.graph or v2 not in self.graph: #No is Working
+    def add_edge(self, v1, v2):
+        if v1 not in self.graph or v2 not in self.graph:  # No is Working
             return None
-        
+
         self.graph[v1].append(v2)
-    
-    def dfs(self,node,visited):
+
+    def dfs(self, node, visited):
         if node not in self.graph:
-            print('Node not present in this graph')
-            return 
+            print("Node not present in this graph")
+            return
         if node not in visited:
             print(node)
             visited.add(node)
             for i in self.graph[node]:
-                self.dfs(i,visited)
-
+                self.dfs(i, visited)
 
 
 obj = Node()
@@ -31,11 +30,11 @@ for i in list1:
 # obj.insert(89)
 # obj.insert(90)
 # obj.insert(70)
-obj.add_edge(89,70)
-obj.add_edge(70,89)
-obj.add_edge(89,90)
+obj.add_edge(89, 70)
+obj.add_edge(70, 89)
+obj.add_edge(89, 90)
 
-obj.dfs(89,set())
+obj.dfs(89, set())
 
 # using dictionary
 # class Graph:

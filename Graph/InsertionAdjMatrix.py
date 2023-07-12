@@ -1,5 +1,6 @@
 # Insertion Adjancency Matrix
 
+
 # Add Node Adjacency Matrix
 def add_node(v):
     global node_count
@@ -27,14 +28,14 @@ def add_edge(v1, v2):
         index2 = nodes.index(v2)
         graph[index1][index2] = 1
         graph[index2][index1] = 1
-        
 
 
 def print_graph():
     for i in range(node_count):
         for j in range(node_count):
-            print(format(graph[i][j],"<3"), end=" ")
+            print(format(graph[i][j], "<3"), end=" ")
         print()
+
 
 nodes = []
 graph = []

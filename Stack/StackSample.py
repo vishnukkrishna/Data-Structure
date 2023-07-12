@@ -24,12 +24,12 @@
 # import queue
 # stack = queue.LifoQueue()
 # # stack = queue.LifoQueue(3)
-# # Adding the element 
+# # Adding the element
 # stack.put(10)
 # stack.put(20)
 # stack.put(30)
 
-# # Deleting the element 
+# # Deleting the element
 # print(stack.get())
 # print(stack.get())
 # print(stack.get())
@@ -65,7 +65,6 @@
 #    print('-------------------------------------------')
 
 
-
 # def pop():
 #    print('-------------------------------------------')
 #    s =  stack.pop()
@@ -94,24 +93,26 @@
 #         print('Enter correct choice')
 
 
-
-
 stack = []
 
+
 def push():
-   value = int(input('Enter the number to push: '))
-   stack.append(value)
-   print('Stack is:',stack)
+    value = int(input("Enter the number to push: "))
+    stack.append(value)
+    print("Stack is:", stack)
+
 
 def pop():
-   s =  stack.pop()
-   print('Deleted element is:', s)
-   print('Stack is:',stack)
+    s = stack.pop()
+    print("Deleted element is:", s)
+    print("Stack is:", stack)
+
 
 def find_mid():
     mid = len(stack) // 2
     mid_value = stack[mid]
-    print('Middle element is : ', mid_value)
+    print("Middle element is : ", mid_value)
+
 
 def delete_middle():
     midd = len(stack) // 2
@@ -131,7 +132,11 @@ def delete_middle():
 
 
 while True:
-    choice = int(input('Enter your choice:\n1.Push\n2.Pop\n3.Find mid\n4.Quit\n5.middle_delete\n'))
+    choice = int(
+        input(
+            "Enter your choice:\n1.Push\n2.Pop\n3.Find mid\n4.Quit\n5.middle_delete\n"
+        )
+    )
     if choice == 1:
         push()
     # elif choice == 2:
@@ -143,4 +148,4 @@ while True:
     elif choice == 5:
         delete_middle()
     else:
-        print('Enter correct choice')
+        print("Enter correct choice")

@@ -11,4 +11,4 @@ def insertion_sort(arr):
 
 data = [10, 4, 25, 5, 1, 12]
 insertion_sort(data)
-print("Sorted Array in Ascending Order:",data)  
+print("Sorted Array in Ascending Order:", data)
