@@ -98,19 +98,21 @@ class BST:
             self.key = node.key
             self.rchild = self.rchild.delete(node.key)
         return self
-
+    # Minimum node
     def min_node(self):
         current = self
         while current.lchild:
             current = current.lchild
         print("Node with smallest key is: ", current.key)
-
+    
+    # Maximum node
     def max_node(self):
         current = self
         while current.rchild:
             current = current.rchild
         print("Node with largest key is: ", current.key)
-
+    
+    # BST validation
     def BST_Validation(self):
         if self.key is None:
             return True

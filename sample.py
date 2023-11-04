@@ -274,20 +274,43 @@
 # ------------------------------------------------- #
 
 
-def rob(nums):
-    prev1 = 0
-    prev2 = 0
+# def rob(nums):
+#     prev1 = 0
+#     prev2 = 0
 
-    for num in nums:
-        #   print(prev1,"prev1")
-        #   print(prev2,"prev2")
-        maxi = max(prev1, prev2 + num)
-        print(maxi, "maxi")
-        prev2 = prev1
-        prev1 = maxi
+#     for num in nums:
+#         #   print(prev1,"prev1")
+#         #   print(prev2,"prev2")
+#         maxi = max(prev1, prev2 + num)
+#         print(maxi, "maxi")
+#         prev2 = prev1
+#         prev1 = maxi
 
-    return prev1
+#     return prev1
 
 
-nums = [1, 2, 10, 11, 7, 3]
-print(rob(nums))
+# nums = [1, 2, 10, 11, 7, 3]
+# print(rob(nums))
+
+sequence = "1234567890"
+reversed_sequence = ""
+even_digits = []
+
+# Extract even digits and store them in a list
+for char in sequence:
+    if char in "02468":
+        even_digits.append(char)
+
+# Reverse the list of even digits
+even_digits.reverse()
+
+# Iterate through the original sequence and replace even digits with reversed even digits
+even_index = 0
+for char in sequence:
+    if char in "02468":
+        reversed_sequence += even_digits[even_index]
+        even_index += 1
+    else:
+        reversed_sequence += char
+
+print(reversed_sequence)
