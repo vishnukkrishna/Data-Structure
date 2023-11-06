@@ -95,7 +95,6 @@
 
 stack = []
 
-
 def push():
     value = int(input("Enter the number to push: "))
     stack.append(value)
@@ -139,10 +138,10 @@ while True:
     )
     if choice == 1:
         push()
-    # elif choice == 2:
-    #     pop()
-    # elif choice == 3:
-    #     find_mid()
+    elif choice == 2:
+        pop()
+    elif choice == 3:
+        find_mid()
     elif choice == 4:
         break
     elif choice == 5:

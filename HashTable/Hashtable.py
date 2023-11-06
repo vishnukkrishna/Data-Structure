@@ -44,38 +44,38 @@ print(obj.delete("place"))
 print(obj.arr)
 
 
-class Hashtable:
-    def __init__(self):
-        self.limit = 10
-        self.arr = [[] for i in range(self.limit)]
+# class Hashtable:
+#     def __init__(self):
+#         self.limit = 10
+#         self.arr = [[] for i in range(self.limit)]
 
-    def sethash(self, key, value):
-        h = self.gethash(key)
-        # print(h)
-        self.arr[h] = value
-        # print(self.arr[h])
+#     def sethash(self, key, value):
+#         h = self.gethash(key)
+#         # print(h)
+#         self.arr[h] = value
+#         # print(self.arr[h])
 
-    def gethash(self, key):
-        h = 0
-        for i in key:
-            h += ord(i)
-            return h % self.limit
+#     def gethash(self, key):
+#         h = 0
+#         for i in key:
+#             h += ord(i)
+#             return h % self.limit
 
-    def search(self, key):
-        h = self.gethash(key)
-        return self.arr[h]
+#     def search(self, key):
+#         h = self.gethash(key)
+#         return self.arr[h]
 
-    def delitem(self, key):
-        h = self.gethash(key)
-        del self.arr[h]
+#     def delitem(self, key):
+#         h = self.gethash(key)
+#         del self.arr[h]
 
 
-obj = Hashtable()
-# obj.sethash('name','12345678)
-# obj.sethash('place','malappuram')
-obj.sethash("age", 23)
-# print(obj.getitem('age'))
-# print(obj.delitem('name'))
-print(obj.delitem("age"))
-print(obj.search("age"))
-print(obj.arr)
+# obj = Hashtable()
+# # obj.sethash('name','12345678)
+# # obj.sethash('place','malappuram')
+# obj.sethash("age", 23)
+# # print(obj.getitem('age'))
+# # print(obj.delitem('name'))
+# print(obj.delitem("age"))
+# print(obj.search("age"))
+# print(obj.arr)

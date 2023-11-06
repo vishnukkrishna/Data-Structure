@@ -292,25 +292,70 @@
 # nums = [1, 2, 10, 11, 7, 3]
 # print(rob(nums))
 
-sequence = "1234567890"
-reversed_sequence = ""
-even_digits = []
+# sequence = "1234567890"
+# reversed_sequence = ""
+# even_digits = []
 
-# Extract even digits and store them in a list
-for char in sequence:
-    if char in "02468":
-        even_digits.append(char)
+# # Extract even digits and store them in a list
+# for char in sequence:
+#     if char in "02468":
+#         even_digits.append(char)
 
-# Reverse the list of even digits
-even_digits.reverse()
+# # Reverse the list of even digits
+# even_digits.reverse()
 
-# Iterate through the original sequence and replace even digits with reversed even digits
-even_index = 0
-for char in sequence:
-    if char in "02468":
-        reversed_sequence += even_digits[even_index]
-        even_index += 1
-    else:
-        reversed_sequence += char
+# # Iterate through the original sequence and replace even digits with reversed even digits
+# even_index = 0
+# for char in sequence:
+#     if char in "02468":
+#         reversed_sequence += even_digits[even_index]
+#         even_index += 1
+#     else:
+#         reversed_sequence += char
 
-print(reversed_sequence)
+# print(reversed_sequence)
+# class Hash_Table:
+#     def __init__(self, size):
+#         self.size = size
+#         self.arr = [[] for x in range(size)]
+
+#     def get_hash(self, key):
+#         h = 0
+#         for char in key:
+#             h += ord(char)
+#         return h % self.size
+    
+#     def insert(self, key, value):
+#         h = self.get_hash(key)
+#         found = False
+        
+#         for idx, element in enumerate(self.arr[h]):
+#             if element[0] == key:
+#                 self.arr[h][idx] = (key, value)
+#                 found = True
+#                 break
+        
+#         if not found:
+#             self.arr[h].append((key, value))
+
+#     def get_item(self, key):
+#         h = self.get_hash(key)
+#         for element in self.arr[h]:
+#             if element[0] == key:
+#                 return element[1]
+            
+#     def delete(self, key):
+#         h = self.get_hash(key)
+#         for idx, element in enumerate(self.arr[h]):
+#             if element[0] == key:
+#                 del self.arr[h][idx]
+
+
+# obj = Hash_Table(10)
+# obj.insert("key", "value")
+# obj.insert("key1", "value1")
+# print(obj.get_item("value"))
+# print(obj.arr)
+
+
+
