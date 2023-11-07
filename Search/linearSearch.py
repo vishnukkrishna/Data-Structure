@@ -1,3 +1,4 @@
+# Linear Search
 def linearSearch(data, list):
     size = len(list)
     if data in list:
@@ -7,7 +8,7 @@ def linearSearch(data, list):
         return -1
     
 
-list1 = [1,2,3,4,5,6,7,8,9,10]
+list1 = [2,1,3,5,4,6,8,7,9,10]
 data = 4
 result = linearSearch(data, list1)
 if result == -1:
