@@ -292,6 +292,8 @@
 # nums = [1, 2, 10, 11, 7, 3]
 # print(rob(nums))
 
+#.........................................................................
+
 # sequence = "1234567890"
 # reversed_sequence = ""
 # even_digits = []
@@ -314,6 +316,8 @@
 #         reversed_sequence += char
 
 # print(reversed_sequence)
+
+# .........................................................................
 # class Hash_Table:
 #     def __init__(self, size):
 #         self.size = size
@@ -356,6 +360,9 @@
 # obj.insert("key1", "value1")
 # print(obj.get_item("value"))
 # print(obj.arr)
+
+
+# .....................................................................
 
 
 
