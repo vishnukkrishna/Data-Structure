@@ -38,6 +38,7 @@
 # root.inorder()
 # print()
 
+# ........................................................
 
 # class MinHeap:
 #     def __init__(self):
@@ -110,6 +111,7 @@
 # print("Sorted array (Heap Sort):")
 # print(sorted_array)
 
+# .......................................................................
 
 # numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # odd_count = 0
@@ -123,6 +125,7 @@
 # print("Count of odd numbers:", odd_count)
 # print("Sum of even numbers:", even_sum)
 
+# ..........................................................................
 
 # num = int(input("Enter the number: "))
 # for i in range(2, num):
@@ -132,6 +135,7 @@
 # else:
 #     print("Prime number")
 
+# ...............................................................................
 
 # def decortor(func):
 #     def sample():
@@ -145,6 +149,8 @@
 
 # new()
 
+# ............................................................................
+
 # def generator(start,end):
 #     curr = start
 #     while curr<=end:
@@ -153,3 +159,6 @@
 
 # for num in generator(1, 5):
 #     print(num)
+
+# ....................................................................................
+
