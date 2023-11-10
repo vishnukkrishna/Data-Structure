@@ -161,4 +161,81 @@
 #     print(num)
 
 # ....................................................................................
+# my_dict = {'a': 3, 'b': 1, 'c': 2, 'd': 4}
 
+# # Sort the dictionary by values in ascending order and return as a list of key-value pairs
+# sorted_items = sorted(my_dict.items(), key=lambda item: item[1])
+
+# # sorted_items will now contain the key-value pairs sorted by values in ascending order
+# print(sorted_items)
+
+
+
+# .............................................................
+
+
+
+# def find_min_max_sums(arr):
+#     # Sort the array in ascending order
+#     arr.sort()
+
+#     # Calculate the minimum sum (sum of the first four elements)
+#     min_sum = sum(arr[:-1])
+
+#     # Calculate the maximum sum (sum of the last four elements)
+#     max_sum = sum(arr[1:])
+
+#     return min_sum, max_sum
+
+# # Example usage
+# arr = [2, 1, 3, 5, 4]
+# min_sum, max_sum = find_min_max_sums(arr)
+
+# # Print the results
+# print(f"{min_sum} {max_sum}")
+
+
+# ............................................................
+
+
+# def min_max_sum(arr):
+#     # Sort the array
+#     arr.sort()
+
+#     # Calculate the minimum sum
+#     min_sum = sum(arr[:-1])
+
+#     # Calculate the maximum sum
+#     max_sum = sum(arr[1:])
+
+#     return min_sum, max_sum
+
+# # Example usage
+# input_array = [2, 1, 3, 5, 4]
+# min_val, max_val = min_max_sum(input_array)
+
+# # Print the result
+# print(f"Minimum sum: {min_val}, Maximum sum: {max_val}")
+
+
+
+# MRO (Method Resolution Order)
+class A:
+    def foo(self):
+        print("A")
+
+class B(A):
+    def foo(self):
+        print("B")
+
+class C(A):
+    def foo(self):
+        print("C")
+
+class D(B, C):
+    pass
+
+
+print(D.__mro__)
+# or
+print(D.mro())
