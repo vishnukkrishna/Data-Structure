@@ -217,25 +217,69 @@
 # # Print the result
 # print(f"Minimum sum: {min_val}, Maximum sum: {max_val}")
 
-
+# ...........................................................
 
 # MRO (Method Resolution Order)
-class A:
-    def foo(self):
-        print("A")
+# class A:
+#     def foo(self):
+#         print("A")
 
-class B(A):
-    def foo(self):
-        print("B")
+# class B(A):
+#     def foo(self):
+#         print("B")
 
-class C(A):
-    def foo(self):
-        print("C")
+# class C(A):
+#     def foo(self):
+#         print("C")
 
-class D(B, C):
-    pass
+# class D(B, C):
+#     pass
 
 
-print(D.__mro__)
-# or
-print(D.mro())
+# print(D.__mro__)
+# # or
+# print(D.mro())
+
+
+
+# ................................................
+
+# Example of __repr__()
+# class MyClass:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+
+#     def __repr__(self):
+#         return f"MyClass(x={self.x}, y={self.y})"
+
+# obj = MyClass(3, 7)
+# print(obj)         # Output: <__main__.MyClass object at 0x...>
+# print(repr(obj))   # Output: MyClass(x=3, y=7)
+
+#............................................................
+
+# Example of __call__()
+# class Counter:
+#     def __init__(self):
+#         self.count = 0
+
+#     def __call__(self):
+#         self.count += 1
+#         return self.count
+
+# # Creating an instance of the class
+# counter = Counter()
+
+# # Calling the object like a function to increment the count
+# print(counter())  # Output: 1
+# print(counter())  # Output: 2
+# print(counter())  # Output: 3
+# print(counter())  # Output: 4
+# print(counter())  # Output: 5
+
+# ................................................................
+
+
+
+

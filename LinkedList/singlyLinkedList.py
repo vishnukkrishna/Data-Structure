@@ -248,6 +248,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+    # Print LinkedList
     def printLL(self):
         if self.head is None:
             print("LinkedList is empty")
@@ -257,11 +258,14 @@ class LinkedList:
                 print(n.data, "---->", end=" ")
                 n = n.ref
 
+    # Add node at the begining of the list
     def add_begin(self, data):
         new_node = Node(data)
         new_node.ref = self.head
         self.head = new_node
 
+
+    # Add node at the end of the list
     def add_end(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -272,6 +276,7 @@ class LinkedList:
                 n = n.ref
             n.ref = new_node
 
+    # Add node before 
     def add_before(self, data, x):
         if self.head is None:
             print("LinkedList is empty")
@@ -293,11 +298,153 @@ class LinkedList:
             new_node.ref = n.ref
             n.ref = new_node
 
+    # Delete the node from the beginning
+    def deleteBegin(self):
+        if self.head is None:
+            print("LinkedList is empty")
+            return
+        self.head = self.head.ref
+
+    # Delete the node from any values 
+    def delete_value(self, value):
+        if self.head is None:
+            print("LinkedList is empty")
+            return
+
+        # If the value to be deleted is in the head
+        if self.head.data == value:
+            self.head = self.head.ref
+            return
+
+        n = self.head
+        while n.ref is not None:
+            if n.ref.data == value:
+                break
+            n = n.ref
+
+        if n.ref is None:
+            print("Node with the given value not found")
+        else:
+            n.ref = n.ref.ref
+
+    # Delete the node from the before
+    def delete_before(self, x):
+        if self.head is None or self.head.ref is None:
+            print("LinkedList is empty or has only one element")
+            return
+
+        if self.head.ref.data == x:
+            self.head = self.head.ref
+            return
+
+        n = self.head
+        while n.ref.ref is not None:
+            if n.ref.ref.data == x:
+                n.ref = n.ref.ref
+                return
+            n = n.ref
+
+        print("Node with value", x, "not found")
+
+    # Delete the node from the after
+    def delete_after(self, x):
+        if self.head is None:
+            print("LinkedList is empty")
+            return
+
+        n = self.head
+        while n is not None:
+            if n.data == x and n.ref is not None:
+                n.ref = n.ref.ref
+                return
+            n = n.ref
+
+        print("Node with value", x, "not found or is the last node")
+
+
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current:
+            next_node = current.ref
+            current.ref = prev
+            prev = current
+            current = next_node
+        self.head = prev
+
 
 LL1 = LinkedList()
 LL1.add_begin(10)
-LL1.add_before(20, 10)
+LL1.add_begin(40)
+LL1.add_begin(50)
+LL1.add_begin(60)
+LL1.add_begin(70)
+# LL1.add_before(20, 10)
 # LL1.add_before(30, 10)
 # LL1.add_after(40, 20)
-LL1.printLL()
+# LL1.deleteBegin()
+# LL1.delete_after(40)
+# LL1.deleteAnyvalue(20)
+# LL1.printLL()
 print()
+# LL1.delete_value(20)
+LL1.reverse()
+# LL1.printLL()
+print()
+
+# ..................................................................
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
+
+#     def append(self, data):
+#         new_node = Node(data)
+#         if not self.head:
+#             self.head = new_node
+#             return
+#         last_node = self.head
+#         while last_node.next:
+#             last_node = last_node.next
+#         last_node.next = new_node
+
+#     def display(self):
+#         current_node = self.head
+#         while current_node:
+#             print(current_node.data, end=" -> ")
+#             current_node = current_node.next
+#         print("None")
+
+#     def reverse(self):
+#         prev = None
+#         current = self.head
+#         while current:
+#             next_node = current.next
+#             current.next = prev
+#             prev = current
+#             current = next_node
+#         self.head = prev
+
+# # Example usage:
+# linked_list = LinkedList()
+# linked_list.append(1)
+# linked_list.append(2)
+# linked_list.append(3)
+# linked_list.append(4)
+# linked_list.append(5)
+# linked_list.append(6)
+
+# print("Original Linked List:")
+# linked_list.display()
+
+# linked_list.reverse()
+
+# print("\nReversed Linked List:")
+# linked_list.display()
+
+
