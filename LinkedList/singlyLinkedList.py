@@ -363,14 +363,15 @@ class LinkedList:
 
     # LinkedList reverse
     def reverse(self):
-        prev = None
-        current = self.head
-        while current:
-            next_node = current.ref
-            current.ref = prev
-            prev = current
-            current = next_node
-        self.head = prev
+        prev = None                  # Initialize a variable 'prev' to None, as there is no node before the first one
+        current = self.head          # Start from the head of the linked list
+        while current:               # Continue the loop until the current node becomes None (end of the linked list)
+            next_node = current.ref  # Save the reference to the next node in 'next_node' variable
+            current.ref = prev       # Reverse the link by pointing the current node's reference to the previous node
+            prev = current           # Move 'prev' to the current node for the next iteration
+            current = next_node      # Move 'current' to the next node for the next iteration
+        self.head = prev             # Update the head of the linked list to the last node, which is now the first node
+
 
 
 LL1 = LinkedList()
